@@ -1,5 +1,4 @@
 from selenium import webdriver
-from config import keys
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from webdriver_manager.chrome import ChromeDriverManager
@@ -9,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 
-def order(k):
+def order():
 
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get("https://unionchapelhillnew.residentportal.com/auth")
@@ -69,4 +68,4 @@ def order(k):
     time.sleep(5)
 
 
-order(keys)
+order()
